@@ -2,16 +2,16 @@
  * CurrencyConverter
  */
 public class CurrencyConverter {
-    int rupee = 63;
-    int dirham = 3;
-    int real = 3;
-    int chileanPeso = 595;
-    int mexicanPeso = 18;
-    int _yen = 107;
-    int $australian = 2;
-    int dollar;
+    static int rupee = 63;
+    static int dirham = 3;
+    static int real = 3;
+    static int chileanPeso = 595;
+    static int mexicanPeso = 18;
+    static int _yen = 107;
+    static int $australian = 2;
+    static int dollar;
 
-    public void printCurrencies() {
+    public static void printCurrencies() {
         System.out.println("rupee: " + rupee);   
         System.out.println("$australian: " + $australian);
         System.out.println("dirham: " + dirham);
@@ -22,7 +22,7 @@ public class CurrencyConverter {
         System.out.println("dollar: " + dollar);
     }
 
-    public void convertCurrencies(int value) {
+    public static void convertCurrencies(int value) {
         System.out.println("\n\n\nrupee: " + (value * rupee));   
         System.out.println("$australian: " + (value * $australian));
         System.out.println("dirham: " + (value *dirham));
@@ -34,9 +34,7 @@ public class CurrencyConverter {
     }
 
     public static void main(String[] args) {
-        CurrencyConverter cc = new CurrencyConverter();
-
-        cc.printCurrencies();
-        cc.convertCurrencies(1000);
+        printCurrencies();
+        convertCurrencies(1000);
     }
 }
